@@ -1,0 +1,398 @@
+/* Import Kidz Block Font */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Baloo+Bhaijaan+2:wght@400;700&display=swap');
+
+body {
+    font-family: 'Baloo Bhaijaan 2', sans-serif;
+    background-color: #1a1a1a; /* Dark background */
+    color: #f8c471; /* Warm golden text */
+    margin: 0;
+    padding: 0;
+}
+.hero-section{
+ 
+        width: 100%;  
+        height: 200px;  
+        background-image: url('img/headBanner.jpeg');  
+        background-size: contain;  
+        background-position:center;  
+        background-repeat: no-repeat;
+        border-radius: 25%; 
+        filter: drop-shadow(0 0 10px rgba(255, 215, 1, 3.8)); 
+        margin: 20px;
+    }
+    
+.hero-container {
+    width: 100%;
+    height:200px; /* Adjust as needed */
+    background: linear-gradient(-45deg, #000000, #383737, #0c0c0c, #232121);
+    background-size: 300% 300%;
+    animation: gradientMove 6s infinite linear;
+    }
+    
+    @keyframes gradientMove {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+    
+
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(-45deg, #000000, #383737, #0c0c0c, #232121);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0px;
+    margin: 5px;
+    padding: 10px;
+    z-index: 5;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Fredoka One', cursive;
+    font-size: 24px;
+    color: #f8c471;
+}
+
+.logo img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+/* Navbar Links */
+.nav-links a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #f8c471;
+    margin: 0 15px;
+    transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Hover Effect - Prevent Other Items from Moving */
+.nav-links a:hover {
+    transform: scale(1.1); /* Only this element grows */
+    color: #ffdb70;
+    text-shadow: 0 0 10px rgba(255, 223, 128, 0.9); /* Blurry glow effect */
+}
+
+/* Search Bar */
+.search-bar input {
+    padding: 8px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Search Bar Hover - Glow Effect */
+.search-bar input:focus {
+    box-shadow: 0 0 12px rgba(255, 223, 128, 0.9);
+    transform: scale(1.05);
+}
+
+/* Dark Mode Toggle */
+.theme-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Toggle Hover Effect */
+.theme-toggle:hover {
+    transform: scale(1.2);
+    text-shadow: 0 0 10px rgba(255, 223, 128, 0.9);
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    font-size: 28px;
+    cursor: pointer;
+    display: none; /* Hidden on desktop */
+}
+
+/* Mobile Menu Styling */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: #222;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Show Mobile Menu when Active */
+.mobile-menu.active {
+    display: flex;
+}
+
+/* Mobile Menu Links */
+.mobile-menu a {
+    text-decoration: none;
+    color: #f8c471;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect for Mobile Menu */
+.mobile-menu a:hover {
+    color: #ffdb70;
+    text-shadow: 0 0 10px rgba(255, 223, 128, 0.9);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide desktop menu on mobile */
+    }
+
+    .mobile-menu-btn {
+        display: block; /* Show hamburger menu */
+    }
+}
+/* Middle Section */
+.middle-section {
+    height: 90vh;
+    background: url('/img/bg.jpeg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    opacity: 0.9;
+    z-index: 1;
+}
+
+/* Overlay Effect for Better Readability */
+.middle-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark Transparent Overlay */
+}
+
+/* Text Content */
+.middle-content {
+    position: relative;
+    text-align: center;
+    color: #f8c471;
+    font-family: 'Fredoka One', cursive;
+    z-index: 2;
+    opacity: 0.9;
+}
+
+/* Heading */
+.middle-content h1 {
+    font-size: 48px;
+    text-shadow: 0 0 15px rgba(255, 223, 128, 0.9);
+    margin-bottom: 10px;
+
+}
+
+/* Subtitle */
+.middle-content p {
+    font-size: 20px;
+    opacity: 0.8;
+    max-width: 600px;
+    margin: auto;
+  
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 18px;
+    color: #222;
+    background-color: #f8c471;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  
+}
+
+/* Button Hover Effect */
+.cta-button:hover {
+    background-color: #ffdb70;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 223, 128, 0.9);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .middle-content h1 {
+        font-size: 36px;
+    }
+    .middle-content p {
+        font-size: 18px;
+    }
+}
+.animation-gallery {
+    background-image: url('img/bg1.jpeg');
+    background-size: cover;
+ 
+    position: relative;
+    width: 90%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 200px;
+}
+
+/* 🔥 Individual Animation Boxes */
+.animation-box {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* 🔥 Glow Effect & Hover Animation */
+.animation-box:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.9);
+}
+
+/* 🔥 Inside Image or GIF */
+.animation-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 📌 Randomized Positions */
+.box1 { top: 10%; left: 5%; transform: rotate(-10deg); }
+.box2 { top: 50%; left: 20%; transform: rotate(15deg); }
+.box3 { top: 30%; left: 50%; transform: rotate(-5deg); }
+.box4 { top: 70%; left: 70%; transform: rotate(8deg); }
+.box5 { top: 20%; left: 85%; transform: rotate(-12deg); }
+/* Row Styling */
+.row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.image-gallery {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    ;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 10px;
+}
+
+.image-gallery::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4;  /* Sirf background ki transparency kam hogi */
+    z-index: -1;   /* Background ko piche rakhne ke liye */
+}
+
+
+/* Base Card Styles */
+.card {
+    background: rgba(0, 0, 0, 0.5);
+    color: #f8c471;
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px rgba(255, 223, 128, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Hover Effects */
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(255, 223, 128, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+/* Image */
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Content */
+.card-content {
+    padding: 15px;
+}
+
+/* Unique Card Shapes & Sizes */
+.card-square { width: 250px; height: 250px; }
+.card-circle { width: 180px; height: 180px; border-radius: 50%; overflow: hidden; }
+.card-wide { width: 400px; height: 200px; display: flex; flex-direction: row; }
+.card-vertical { width: 200px; height: 300px; }
+.card-small-square { width: 130px; height: 130px; }
+.card-large-square { width: 300px; height: 300px; }
+.card-diamond { width: 200px; height: 200px; transform: rotate(45deg); }
+.card-oval { width: 300px; height: 150px; border-radius: 50%; }
+.card-large-horizontal { width: 500px; height: 200px; }
+.card-trapezoid { width: 250px; height: 200px; clip-path: polygon(20% 0, 80% 0, 100% 100%, 0% 100%); }
+.card-floating { width: 220px; height: 220px; animation: float 3s infinite ease-in-out; }
+.card-rotated { width: 230px; height: 230px; transform: rotate(-10deg); }
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Mixed Alignment for a Random Layout */
+.row:nth-child(odd) .card:nth-child(1) { transform: translateY(-20px); }
+.row:nth-child(even) .card:nth-child(2) { transform: translateY(15px); }
+.row:nth-child(odd) .card:nth-child(3) { transform: translateY(-10px); }
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .image-gallery { flex-direction: column; align-items: center; }
+    .row { flex-direction: column; align-items: center; gap: 15px; }
+    .card { width: 100%; }
+    .card-wide, .card-large-horizontal { flex-direction: column; height: auto; }
+}
